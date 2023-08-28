@@ -1,0 +1,22 @@
+CLASS zclass_99 DEFINITION
+  PUBLIC
+  FINAL
+  CREATE PUBLIC .
+
+  PUBLIC SECTION.
+   INTERFACES if_oo_adt_classrun .
+  PROTECTED SECTION.
+  PRIVATE SECTION.
+ENDCLASS.
+
+
+
+CLASS ZCLASS_99 IMPLEMENTATION.
+
+
+METHOD if_oo_adt_classrun~main.
+
+Delete from zuser_book WHERE is_returned = 'Y'.
+
+ENDMETHOD.
+ENDCLASS.

@@ -1,0 +1,88 @@
+@Metadata.layer: #PARTNER
+
+@UI : { 
+
+   headerInfo : { 
+                    typeName: 'Book Information',
+                    typeNamePlural: 'Books Information',
+                    title : {  type : #STANDARD , label : 'Books Information' , value : 'BookId'}
+   
+   
+   }
+
+}
+
+annotate view ZC_BOOK_MASTER_1234
+    with 
+{
+
+   @UI.facet: [{ id : 'Book'  ,
+               purpose : #STANDARD,
+               type : #IDENTIFICATION_REFERENCE,
+               label : 'Book Information',
+               position: 10}]
+               
+ @UI : { lineItem: [{ position :10 , label : 'Book Id' }],
+         identification: [{ position : 10 , label : 'Book Id' }]}
+    Bookid;
+    @UI : { lineItem: [{ position :20 , label : 'Model Id' }],
+         identification: [{ position : 20 , label : 'Model Id' }]}
+    Modelid;
+    @UI : { lineItem: [{ position :30 , label : 'Book Name' }],
+         identification: [{ position : 30 , label : 'Book Name' }]}
+    BookName;
+    @UI : { lineItem: [{ position :40 , label : 'Book Author' }],
+         identification: [{ position : 40 , label : 'Book Author' }]}
+    Author;
+    @UI : { lineItem: [{ position :50 , label : 'Category' }],
+         identification: [{ position : 50 , label : 'Category' }]}
+    @Consumption.valueHelpDefinition: [{ entity : { name : 'ZI_CATEGORY_1234' , element: 'Value' } ,
+    distinctValues : true,
+    additionalBinding : [ { localElement : 'CateDesc' ,
+                            element : 'Description',
+                            usage: #FILTER_AND_RESULT
+     } ]
+    
+    }]
+         
+    Category;
+    
+//    @UI : { identification: [{ position: 55 , label : '' }] }
+//    
+//    CateDesc;
+    
+    
+    
+    @UI : { lineItem: [{ position :60 , label : 'Available Books' }],
+         identification: [{ position : 60 , label : 'Available Books' }]}
+    AvailableBooks;
+    @UI : { lineItem: [{ position :70 , label : 'Total Books' }],
+         identification: [{ position : 70 , label : 'Total Books' }]}
+    TotalBooks;
+    @UI : { lineItem: [{ position :80 , label : 'Return days' }],
+         identification: [{ position : 80 , label : 'Return days' }]}
+    ReturnDays;
+    @UI : { lineItem: [{ position :90 , label : 'Fine Amount' }],
+         identification: [{ position : 90 , label : 'Fine Amount' }]}
+    FineAmount;
+    
+    @UI : { lineItem: [{ position :100 , label : 'Book Price' }],
+         identification: [{ position : 100 , label : 'Book Price' }]}
+    Price;
+    @UI : { lineItem: [{ position :110 , label : 'Currency' }],
+         identification: [{ position : 110 , label : 'Currency' }]}
+    Currency;
+    
+    @UI.hidden: true
+  CreatedBy;
+
+  @UI.hidden: true
+  CreatedAt;
+
+  @UI.hidden: true
+  LastChangedBy;
+
+  @UI.hidden: true
+  LastChangedAt;
+    
+}

@@ -1,0 +1,45 @@
+managed implementation in class zbp_i_book_master_1234 unique;
+strict ( 2 );
+
+define behavior for ZI_BOOK_MASTER_1234 alias Book
+persistent table zbook_info_maste
+lock master
+authorization master ( instance )
+//etag master <field_name>
+{
+  create;
+  update;
+  delete;
+
+
+  mapping for zbook_info_maste {
+
+    Bookid =   bookid;
+   Modelid = modelid ;
+   BookName = book_name ;
+     Author = author ;
+    Category = category ;
+    AvailableBooks = available_books;
+    TotalBooks = total_books;
+    ReturnDays = return_days ;
+
+   FineAmount = fine_amount ;
+
+     Price = price  ;
+    Currency = currency ;
+  CreatedBy = created_by;
+
+        CreatedAt = created_at;
+
+        LastChangedBy = last_changed_by;
+
+        LastChangedAt = last_changed_at;
+
+        LocalLastChangedAt = local_last_changed_at;
+
+
+
+
+  }
+
+}

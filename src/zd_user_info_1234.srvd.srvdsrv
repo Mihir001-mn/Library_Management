@@ -1,0 +1,7 @@
+@EndUserText.label: 'serviece defination'
+define service ZD_USER_INFO_1234 {
+  expose ZC_USER_INFO_1234;
+  expose ZI_USER_INFO_1234;
+  expose ZC_STUDENT_BOOK_1234;
+  expose ZI_Student_book_1234;
+}

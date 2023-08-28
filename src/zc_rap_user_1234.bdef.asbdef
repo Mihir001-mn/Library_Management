@@ -1,0 +1,41 @@
+managed implementation in class zbp_c_rap_user_1234 unique;
+strict ( 1 );
+
+define behavior for ZC_RAP_USER_1234 alias User
+persistent table zuser_book
+lock master
+authorization master ( instance )
+//etag master <field_name>
+{
+  create;
+  update;
+  delete;
+
+   field (numbering : managed, readonly)  Issueid;
+    action (features : instance) isReturned result [1] $self;
+   mapping for zuser_book
+  {
+
+ Issueid = issueid ;
+ Modelid = modelid;
+UserId = user_id;
+ IssueDate =issue_date;
+ExReturnDate = ex_return_date;
+AcReturnDate = ac_return_date;
+IsReturned = is_returned;
+
+Fine = fine;
+FineStatus = fine_status;
+ Currency = currency;
+
+
+
+
+
+
+
+
+
+  }
+
+}

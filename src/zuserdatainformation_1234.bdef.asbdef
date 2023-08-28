@@ -1,0 +1,35 @@
+managed implementation in class zbp_userdatainformation_1234 unique;
+strict ( 2 );
+
+define behavior for ZUserdatainformation_1234 alias UserInfo
+persistent table zrap_user_info
+lock master
+authorization master ( instance )
+//etag master <field_name>
+{
+  create;
+  update;
+  delete;
+  mapping  for  zrap_user_info {
+
+   UserId = user_id;
+    UserName = user_name;
+    Email = email;
+     Password = Password;
+     UserType =  user_type;
+     UserAddress = user_address ;
+    BookLimit =  book_limit;
+     UserStatus =  user_status;
+   CreatedAt = created_at;
+
+        LastChangedBy = last_changed_by;
+
+        LastChangedAt = last_changed_at;
+
+        LocalLastChangedAt = local_last_changed_at;
+
+
+
+
+  }
+}

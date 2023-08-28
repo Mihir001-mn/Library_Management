@@ -1,0 +1,10 @@
+projection;
+strict ( 1 );
+
+define behavior for ZC_USER_1234 alias User
+{
+  use create;
+  use update;
+  use delete;
+  use action isReturned;
+}

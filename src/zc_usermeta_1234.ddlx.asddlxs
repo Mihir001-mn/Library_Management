@@ -1,0 +1,71 @@
+@Metadata.layer: #PARTNER
+
+@UI : { 
+
+   headerInfo : { 
+                    typeName: 'User',
+                    typeNamePlural: 'Users',
+                    title : {  type : #STANDARD , label : 'User Books' , value : 'IssueId'}
+   
+   
+   }
+
+}
+
+
+annotate entity ZC_USER_1234
+    with 
+{ 
+
+@UI.facet: [{ id : 'User'  ,
+               purpose : #STANDARD,
+               type : #IDENTIFICATION_REFERENCE,
+               label : 'User Book',
+               position: 10}]
+
+
+
+@UI : { lineItem: [{ position :10 , label : 'Issue Id' }],
+         identification: [{ position : 10 , label : 'Issue Id' }]}
+    Issueid;
+    
+ @UI : { lineItem: [{ position :15 , label : 'Book Id' }],
+         identification: [{ position : 16 , label : 'Book Id' }]}   
+    BookID;
+    @UI : { lineItem: [{ position :20 , label : 'Model Id' }],
+         identification: [{ position : 20 , label : 'Model Id' }]}
+         
+    
+    Modelid;
+    @UI : { lineItem: [{ position :30 , label : 'User Id' }],
+         identification: [{ position : 30 , label : 'User Id' }]}
+    UserId;
+    @UI : { lineItem: [{ position :40 , label : 'Issue Date' }],
+         identification: [{ position : 40 , label : 'Issue Date' }]}
+    IssueDate;
+    @UI : { lineItem: [{ position :50 , label : 'Expected return date' }],
+         identification: [{ position : 50 , label : 'Expected return date' }]}
+    ExReturnDate;
+    @UI : { lineItem: [{ position :60 , label : 'Actual return date' }],
+         identification: [{ position : 60 , label : 'Actual return Date' }]}
+    AcReturnDate;
+    @UI : { lineItem: [{ position :70 , label : 'Is Returned' },
+            { type : #FOR_ACTION , dataAction :'isReturned' , label : 'Book Returned'}
+    
+    ],
+         identification: [{ position : 70 , label : 'Is Returned' },
+         { type : #FOR_ACTION , dataAction :'isReturned' , label : 'Book Returned'}
+         
+         ]}
+    IsReturned;
+    @UI : { lineItem: [{ position :80 , label : 'Fine' }],
+         identification: [{ position : 80 , label : 'Fine' }]}
+    Fine;
+    @UI : { lineItem: [{ position :90 , label : 'Fine Status' }],
+         identification: [{ position : 90 , label : 'Fine Status' }]}
+    FineStatus;
+    @UI : { lineItem: [{ position :100 , label : 'Currency' }],
+         identification: [{ position : 100 , label : 'Currency' }]}
+    Currency;
+    
+}

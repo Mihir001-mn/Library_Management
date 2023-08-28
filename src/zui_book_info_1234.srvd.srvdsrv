@@ -1,0 +1,4 @@
+@EndUserText.label: 'Service Defination'
+define service ZUI_BOOK_INFO_1234 {
+  expose ZC_BOOK_MASTER_1234;
+}

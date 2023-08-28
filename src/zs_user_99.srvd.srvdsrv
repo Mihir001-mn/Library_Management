@@ -1,0 +1,4 @@
+@EndUserText.label: 'Service Defination'
+define service ZS_USER_99 {
+  expose ZC_RAP_PROJUSER;
+}

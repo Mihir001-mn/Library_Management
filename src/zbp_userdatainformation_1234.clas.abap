@@ -1,0 +1,5 @@
+CLASS zbp_userdatainformation_1234 DEFINITION PUBLIC ABSTRACT FINAL FOR BEHAVIOR OF zuserdatainformation_1234.
+ENDCLASS.
+
+CLASS zbp_userdatainformation_1234 IMPLEMENTATION.
+ENDCLASS.

@@ -1,0 +1,93 @@
+@Metadata.layer: #PARTNER
+
+@UI : { 
+        headerInfo : { typeName: 'Book Issued',
+                       typeNamePlural: 'Books Issued',
+                       
+                       
+                      title : { type:#STANDARD ,
+                                label : 'Books Issued',
+                                value : 'Issueid'},
+                                
+                      description : { 
+                      type: #STANDARD,
+                      label: 'Books Issued'
+                      }
+        },
+        
+        presentationVariant: [{ sortOrder: [{by: 'IssueDate',direction : #ASC
+                                  }
+                                   ] }]
+}
+
+
+@Search.searchable: true
+annotate view ZI_Student_book_1234
+    with 
+{
+   @UI.facet: [{ id: 'Issued',
+                  purpose: #STANDARD,
+                  type:#IDENTIFICATION_REFERENCE,
+                  label : 'Books Issued' ,
+                  position :10 }]
+                  
+   @UI: { lineItem: [{ position :10 , label : 'IssueId' }],
+   identification: [{ position: 10 , label : 'IssueId' }] }
+   
+   Issueid;
+   @UI : { lineItem: [{ position :20 , label : 'Book Id' }],
+         identification: [{ position : 20 , label : 'Book Id' }]}
+         @Search.defaultSearchElement: true
+   Bookid;
+   @UI : { lineItem: [{ position :30 , label : 'Model Id' }],
+         identification: [{ position : 30 , label : 'Model Id' }]}
+         @Search.defaultSearchElement: true
+   Modelid;
+   @UI : { lineItem: [{ position :40 , label : 'User Id' }],
+         identification: [{ position : 40 , label : 'User Id' }]}
+         @Search.defaultSearchElement: true
+   UserId;
+   @UI : { lineItem: [{ position :50 , label : 'Issue Date' }],
+             identification: [{ position : 50 , label : 'Issue Date' }]}
+             @Search.defaultSearchElement: true
+   IssueDate;
+   @UI : { lineItem: [{ position :60 , label : 'Expected Return Date' }],
+         identification: [{ position : 60 , label : 'Expected Return Date' }
+         ]}
+         @Search.defaultSearchElement: true
+   ExReturnDate;
+   @UI : { lineItem: [{ position :70 , label : 'Actual Return Date' }],
+         identification: [{ position : 70 , label : 'Actual Return Date' }]}
+    @Search.defaultSearchElement: true
+   AcReturnDate;
+   @UI : { lineItem: [{ position :80 , label : 'Is Returned' }],
+         identification: [{ position : 80 , label : 'Is Returned' }]}
+   @Search.defaultSearchElement: true
+   IsReturned;
+   @UI : { lineItem: [{ position :90 , label : 'Fine' }],
+         identification: [{ position : 90 , label : 'Fine' }]}
+   @Search.defaultSearchElement: true
+   Fine;
+   @UI : { lineItem: [{ position :100 , label : 'Fine Status' }],
+         identification: [{ position : 100 , label : 'Fine Status' }]}
+   @Search.defaultSearchElement: true
+   FineStatus;
+   @UI : { lineItem: [{ position :110 , label : 'Currency' }],
+         identification: [{ position : 110 , label : 'Currency' }]}
+   @Search.defaultSearchElement: true
+   Currency;
+   @UI.hidden: true
+  CreatedBy;
+
+  @UI.hidden: true
+  CreatedAt;
+
+  @UI.hidden: true
+  LastChangedBy;
+
+  @UI.hidden: true
+  LastChangedAt;
+   
+
+    
+}

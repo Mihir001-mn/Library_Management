@@ -1,0 +1,59 @@
+@Metadata.layer: #PARTNER
+
+@UI : { 
+
+   headerInfo : { 
+                    typeName: 'User',
+                    typeNamePlural: 'Users',
+                    title : {  type : #STANDARD , label : 'User Books' , value : 'UserName'}
+   
+   
+   }
+
+}
+annotate view ZC_USERDATAINFORMATION_1234
+    with 
+{
+     @UI.facet: [{ id : 'UserInfo'  ,
+               purpose : #STANDARD,
+               type : #IDENTIFICATION_REFERENCE,
+               label : 'User Information',
+               position: 10}
+               ]
+               
+    @UI : { lineItem: [{ position :10 , label : 'User Id' }],
+         identification: [{ position : 10 , label : 'User Id' }]}
+   UserId;
+    @UI : { lineItem: [{ position :20 , label : 'User Name' }],
+         identification: [{ position : 20 , label : 'User  Name' }]}
+   UserName;
+    @UI : { lineItem: [{ position :30 , label : 'User Email' }],
+         identification: [{ position : 30 , label : 'User Email' }]}
+   Email;
+    @UI : { lineItem: [{ position :40 , label : 'User Type' }],
+         identification: [{ position : 40 , label : 'User Type' }]}
+//   Password;
+//    @UI : { lineItem: [{ position :10 , label : 'Book Id' }],
+//         identification: [{ position : 10 , label : 'Book Id' }]}
+   UserType;
+    @UI : { lineItem: [{ position :50 , label : 'User Address' }],
+         identification: [{ position : 50 , label : 'User Address' }]}
+   UserAddress;
+    @UI : { lineItem: [{ position :60 , label : 'Book limit' }],
+         identification: [{ position : 60 , label : 'Book Limit' }]}
+   BookLimit;
+    @UI : { lineItem: [{ position :70 , label : 'User Status' }],
+         identification: [{ position : 70 , label : 'User status' }]}
+   UserStatus;
+   @UI.hidden: true
+  CreatedBy;
+
+  @UI.hidden: true
+  CreatedAt;
+
+  @UI.hidden: true
+  LastChangedBy;
+
+  @UI.hidden: true
+  LastChangedAt;
+}
